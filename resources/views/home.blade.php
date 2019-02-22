@@ -5,8 +5,9 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 contenitore">
             <h1>Laravel Crud</h1>
+        <a href="{{ route('montagne') }}"><button type="button" name="" id="" class="btn btn-primary" btn-lg btn-block">Vai alla crud</button></a>
         </div>
     </div>
     <div class="row">
@@ -15,9 +16,9 @@
                 @foreach ($montagne as $montagna)
                 <li>
                     <h2>
-                        Nome: {{ $montagna['Nome'] }},
+                        {{-- Nome: {{ $montagna['Nome'] }},
                         Nazione: {{ $montagna['Nazione'] }},
-                        Altitudine: {{ $montagna->Altitudine }} m,
+                        Altitudine: {{ $montagna->Altitudine }} m, --}}
                         {{-- posso usare entrmbe le notazioni -> o [] --}}
                     </h2>
                 </li>

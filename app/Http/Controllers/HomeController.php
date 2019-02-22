@@ -17,5 +17,6 @@ class HomeController extends Controller
         ];
 
         return view('home', $data, compact('montagne'));
+        //compact va bene per singola variabile, mentre per array meglio passarlo come qui ho passato $data
     }
 }
