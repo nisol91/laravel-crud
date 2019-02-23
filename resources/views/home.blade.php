@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-12 contenitore">
             <h1>Welcome to Mountains Laravel CRUD</h1>
-        <a href="{{ route('mountains.index') }}"><button type="button" name="" id="" class="btn btn-primary" btn-lg btn-block">Vai alla crud</button></a>
+        <a href="{{ route('mountains.index') }}"><button type="button" name="" id="" class="btn btn-primary" btn-lg btn-block">Go to mountains list</button></a>
         </div>
     </div>
     <div class="row">

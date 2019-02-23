@@ -22,7 +22,18 @@ NB: **Bisogna sempre ricordare la differenza fra view e rotta:**
 La view e' il nome del file blade.php.
 La rotta e' il percorso. I percorsi sono elencati nella colonna Name della php artisan route:list.
 
-Note: 
-1-per gestire la nav e dirgli di illuminare solo la pagina selezionata si usa l operatore ternario basandosi su un metodo che identifica il route name: 
+**Note**: 
+
+
+1 - per gestire la nav e dirgli di illuminare solo la pagina selezionata si usa l operatore ternario basandosi su un metodo che identifica il route name: 
 `{{ Request::route()->getName() == 'mountains.index' ? 'active' : null }}`
 Lo si sfrutta quindi per togliere o meno la classe active.
+
+2 - per passare l id devo farlo aggiungendo l id nella route:
+`href="{{ route('mountains.show', $montagna->ID) }}`
+
+3 - dependence injection in alternativa al find $id:
+`public function show(Mountain $mountain) {
+
+    return view('show', compact('mountain'))
+}`
