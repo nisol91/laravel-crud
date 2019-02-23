@@ -30,10 +30,9 @@ La rotta e' il percorso. I percorsi sono elencati nella colonna Name della php a
 Lo si sfrutta quindi per togliere o meno la classe active.
 
 2 - per passare l id devo farlo aggiungendo l id nella route:
+
 `href="{{ route('mountains.show', $montagna->ID) }}`
 
 3 - dependence injection in alternativa al find $id:
-`public function show(Mountain $mountain) {
 
-    return view('show', compact('mountain'))
-}`
+`public function show(Mountain $mountain) {return view('show', compact('mountain'))}`

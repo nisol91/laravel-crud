@@ -84,7 +84,7 @@ class MountainsController extends Controller
     {
         //in alternativa c e la dependence injection con al posto di ($id)
         //(Mountain $mountain)
-        $mountains = Mountain::all();
+        $mountain = Mountain::all();
 
 
         //passo alla vista show solo l elemento con l id in questione
@@ -97,7 +97,7 @@ class MountainsController extends Controller
 
         //in alternativa c e il metodo find:
 
-        $myMountain = Mountain::find($id);
+        $mountain = Mountain::find($id);
 
 
 
