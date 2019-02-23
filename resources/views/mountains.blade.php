@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-12 contenitore">
             <h1>Mountains List</h1>
-        {{-- <a href="{{ route('montagne') }}"><button type="button" name="" id="" class="btn btn-primary" btn-lg btn-block">Vai alla crud</button></a> --}}
+            <a href="{{ route('mountains.create') }}"><button type="button" name="" id="" class="btn btn-primary" btn-lg btn-block">Crea nuovo utente</button></a>
         </div>
     </div>
     <div class="row">
@@ -26,9 +26,9 @@
                 @foreach ($mountains as $montagna)
                     <tbody>
                         <tr>
-                            <th scope="row">{{ $montagna['ID'] }}</th>
-                            <td>{{ $montagna['Nome'] }}</td>
-                            <td>{{ $montagna['Nazione'] }}</td>
+                            <th scope="row">{{ $montagna->ID }}</th>
+                            <td>{{ $montagna->Nome }}</td>
+                            <td>{{ $montagna->Nazione }}</td>
                             <td>{{ $montagna->Altitudine }} m</td>
                             <td><button type="button" class="btn btn-danger">Delete</button></td>
                         </tr>

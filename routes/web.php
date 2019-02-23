@@ -18,4 +18,4 @@ Route::get('/', 'HomeController@index')->name('home');
 
 
 //con resourse chiamo una risorsa, cioe un controller con tanti metodi
-Route::resource('/mountains', 'MountainsController')->name('index', 'montagne');
+Route::resource('/mountains', 'MountainsController');

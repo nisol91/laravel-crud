@@ -34,6 +34,8 @@ class MountainsController extends Controller
     public function create()
     {
         //
+        dd('pagina crea nuovoutente');
+
     }
 
     /**
