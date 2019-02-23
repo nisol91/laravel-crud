@@ -10677,3 +10677,11 @@ body {
   flex-direction: column;
 }
 
+.nascosto {
+  display: none;
+}
+
+h1 {
+  margin: 20px;
+}
+

@@ -11,14 +11,14 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 nascosto">
             <ul>
                 @foreach ($montagne as $montagna)
                 <li>
                     <h2>
-                        {{-- Nome: {{ $montagna['Nome'] }},
+                        Nome: {{ $montagna['Nome'] }},
                         Nazione: {{ $montagna['Nazione'] }},
-                        Altitudine: {{ $montagna->Altitudine }} m, --}}
+                        Altitudine: {{ $montagna->Altitudine }} m,
                         {{-- posso usare entrmbe le notazioni -> o [] --}}
                     </h2>
                 </li>

@@ -15,7 +15,15 @@ class MountainsController extends Controller
      */
     public function index()
     {
-        dd('siamo nell index');
+        // dd('siamo nell index');
+
+        $mountains = Mountain::all();
+
+        $data = [
+            'title' => 'La mia CRUD'
+        ];
+
+        return view('mountains', $data, compact('mountains'));
     }
 
     /**
