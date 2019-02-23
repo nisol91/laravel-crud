@@ -5,13 +5,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item active">
+            <li class="nav-item {{ Request::route()->getName() == 'mountains.index' ? 'active' : null }}">
               <a class="nav-link" href="{{ route('mountains.index') }}">Mountains List<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Add</a>
+            <li class="nav-item {{ Request::route()->getName() == 'mountains.create' ? 'active' : null }}">
+              <a class="nav-link" href="{{ route('mountains.create') }}">Create</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{ Request::route()->getName() == 'mountains.update' ? 'active' : null }}">
               <a class="nav-link" href="#">Update</a>
             </li>
           </ul>

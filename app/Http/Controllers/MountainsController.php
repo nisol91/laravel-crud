@@ -20,10 +20,10 @@ class MountainsController extends Controller
         $mountains = Mountain::all();
 
         $data = [
-            'title' => 'La mia CRUD'
+            'title' => 'Index'
         ];
 
-        return view('mountains', $data, compact('mountains'));
+        return view('index', $data, compact('mountains'));
     }
 
     /**
@@ -34,7 +34,12 @@ class MountainsController extends Controller
     public function create()
     {
         //
-        dd('pagina crea nuovoutente');
+        // dd('pagina crea nuovoutente');
+        $data = [
+            'title' => 'Create'
+        ];
+        return view('create', $data);
+
 
     }
 
