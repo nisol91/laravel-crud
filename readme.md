@@ -1,4 +1,4 @@
-CRUD:
+**CRUD:**
 
 bisogna creare il model. Esso fa da ponte tra DB e la nostra applicazione.
 Il nome del model e' il singolare del nome della tabella a cui e' riferito. c e' un model per ogni tabella.
@@ -16,6 +16,8 @@ cosi laravel capisce che la tabella ha quel nome, se no laravel ragiona pensando
 Per facilitare la CRUD, si puo creare una resource, sempre con php artisan.
 E' un controller con gia preimpostati tutti i metodi per la crud
 
+**SEEDER, MIGRATION, VALIDATION**
+
 Utilizzo le migration per creare tabelle dal db:
 
 `php artisan make:model User -m -r`
@@ -25,12 +27,17 @@ I seeder mi permettono di popolare il db, manualmente o automaticamente con un f
 
 `php artisan make:seeder UsersTableSeeder`
 
+Se voglio dividere le chiamate al db in pagine, invece che `Model::get()` uso `Model::paginate(numero elementi per pagina)` e il navigatore lo metto dove voglio nel mio blade: `{{ $users->links() }}`.
+
+-------------------------------------------------
+
+
+**Note**: 
+
 NB-> **Bisogna sempre ricordare la differenza fra view e rotta:**
 
 La view e' il nome del file blade.php.
 La rotta e' il percorso. I percorsi sono elencati nella colonna Name della php artisan route:list.
-
-**Note**: 
 
 
 1 - per gestire la nav e dirgli di illuminare solo la pagina selezionata si usa l operatore ternario basandosi su un metodo che identifica il route name: 

@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder
     public function run(Faker $faker)
     //scrivendo Faker negli argomenti della funzione, significa che lo usero chiamandolo $faker
     {
-        for ($i=0; $i < 10; $i++) {
+        for ($i=0; $i < 100; $i++) {
 
             $newFakeUser = new User;
 
