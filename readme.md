@@ -27,10 +27,14 @@ I seeder mi permettono di popolare il db, manualmente o automaticamente con un f
 
 `php artisan make:seeder UsersTableSeeder`
 
+-----
+
+
 Se voglio dividere le chiamate al db in pagine, invece che `Model::get()` uso `Model::paginate(numero elementi per pagina)` e il navigatore lo metto dove voglio nel mio blade: `{{ $users->links() }}`.
 
 Se voglio modificarlo, mi copio [con il comando `php artisan vendor:publish --tag=laravel-pagination`] le pagine di stile (blade) in una cartella e poi posso cambiarci le classi (per esempio sostituire le classi di default bootstrap con quelle di bulma)
 
+-----
 
 Il metodo validate() applicato alla potente classe Request, mi permette di effettuare dei controlli sui campi di input. ricordarsi di aggiungere nel blase la parte che mostra a schermo l errore:
  ```language
@@ -44,7 +48,7 @@ Il metodo validate() applicato alla potente classe Request, mi permette di effet
     </div>
 @endif
  ```
-
+Se il mio input non passa i test, il programma si ferma li, no va nemmeno a creare il new User. Quindi non vengono nemmeno mostrati gli errori del database, il che va a vantaggio di una migliore esperienza utente.
 -------------------------------------------------
 
 

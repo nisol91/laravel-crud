@@ -42,8 +42,9 @@ class UserController extends Controller
 
         //la classe request ha tanti metodi tra cui validate per convalidare gli input
         $datiValidi = $request->validate([
-            'name' => 'required',
-            'lastname' => 'required',
+            'name' => 'required|min:2',
+            'lastname' => 'required|min:2|unique:users',
+            'age' => 'min:10',
 
         ]);
 
@@ -63,7 +64,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return view('users.show', compact('user'));
     }
 
     /**
@@ -74,7 +75,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        return view('users.edit', compact('user'));
     }
 
     /**
@@ -86,7 +87,16 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $data = $request->all();
+        $datiValidi = $request->validate([
+            'name' => 'required|min:2',
+            'lastname' => 'required|min:2',
+            'age' => 'min:10',
+
+        ]);
+        $user->update($data);
+
+        return redirect()->route('users.index');
     }
 
     /**
@@ -97,6 +107,8 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $user->delete();
+
+        return redirect()->route('users.index');
     }
 }

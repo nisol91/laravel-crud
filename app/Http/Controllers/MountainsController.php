@@ -117,7 +117,7 @@ class MountainsController extends Controller
         $mountain = Mountain::find($id);
 
         return view('edit', compact('mountain'));
-        //questa pagina e praticamente identica a quella show.
+        //questa pagina e praticamente identica a quella create.
     }
 
     /**

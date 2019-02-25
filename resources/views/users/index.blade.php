@@ -1,6 +1,6 @@
 @extends('app');
 @section('title')
-    Index
+    Users Index
 @endsection
 @section('content')
 <div class="container">
