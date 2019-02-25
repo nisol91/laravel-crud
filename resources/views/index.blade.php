@@ -27,14 +27,14 @@
                 @foreach ($mountains as $montagna)
                     <tbody>
                         <tr>
-                            <th scope="row">{{ $montagna->ID }}</th>
+                            <th scope="row">{{ $montagna->id }}</th>
                             <td>{{ $montagna->name }}</td>
                             <td>{{ $montagna->nation }}</td>
                             <td>{{ $montagna->elevation }} m</td>
-                            <td><a class="btn btn-primary" href="{{ route('mountains.show', $montagna->ID) }}" role="button">View</a></td>
-                            <td><a class="btn btn-success" href="{{ route('mountains.edit', $montagna->ID) }}" role="button">Edit</a></td>
+                            <td><a class="btn btn-primary" href="{{ route('mountains.show', $montagna->id) }}" role="button">View</a></td>
+                            <td><a class="btn btn-success" href="{{ route('mountains.edit', $montagna->id) }}" role="button">Edit</a></td>
                             <td>
-                                <form action="{{ route('mountains.destroy', $montagna->ID) }}" method="post">
+                                <form action="{{ route('mountains.destroy', $montagna->id) }}" method="post">
                                     @method('DELETE')
                                     @csrf
                                     <input class="btn btn-danger" type="submit" value="Delete">

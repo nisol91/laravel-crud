@@ -135,10 +135,10 @@ class MountainsController extends Controller
         // invece che $id mettevo Mountain $mountain nell argomento della funzione update.
 
         $data = $request->all();
-
         $mountain->update($data);
 
-        return redirect()->back();
+        return redirect()->route('mountains.index');
+
     }
 
     /**
@@ -149,8 +149,10 @@ class MountainsController extends Controller
      */
     public function destroy($id)
     {
+
         $mountain = Mountain::find($id);
         $mountain->delete();
-        return redirect()->back();
+
+        return redirect()->route('mountains.index');
     }
 }

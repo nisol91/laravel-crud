@@ -8,7 +8,7 @@
         <div class="col-12 contenitore">
             <h1>Edit element: {{ $mountain->name }}</h1>
             {{-- esempio di tipico form di input --}}
-            <form class="form-group" action="{{ route('mountains.update', $mountain->ID) }}" method="post">
+            <form class="form-group" action="{{ route('mountains.update', $mountain->id) }}" method="post">
                 @method('PUT')
                 @csrf
                 {{-- token di sicurezza per verificare che sia tu a inserire i dati e non hacker da altri pc--}}
