@@ -29,6 +29,20 @@ I seeder mi permettono di popolare il db, manualmente o automaticamente con un f
 
 Se voglio dividere le chiamate al db in pagine, invece che `Model::get()` uso `Model::paginate(numero elementi per pagina)` e il navigatore lo metto dove voglio nel mio blade: `{{ $users->links() }}`.
 
+Se voglio modificarlo, mi copio [con il comando `php artisan vendor:publish --tag=laravel-pagination`] le pagine di stile (blade) in una cartella e poi posso cambiarci le classi (per esempio sostituire le classi di default bootstrap con quelle di bulma)
+
+
+Il metodo validate() applicato alla potente classe Request, mi permette di effettuare dei controlli sui campi di input. ricordarsi di aggiungere nel blase la parte che mostra a schermo l errore:
+`@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif`
+
 -------------------------------------------------
 
 

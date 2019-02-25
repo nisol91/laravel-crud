@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(20);
+        $users = User::orderBy('id', 'desc')->paginate(20);
 
         return view('users.index', compact('users'));
     }
@@ -26,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('users.create');
     }
 
     /**
@@ -37,7 +37,22 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+
+        //la classe request ha tanti metodi tra cui validate per convalidare gli input
+        $datiValidi = $request->validate([
+            'name' => 'required',
+            'lastname' => 'required',
+
+        ]);
+
+
+        $newElement = new User();
+        $newElement->fill($data);
+        $newElement->save();
+        return redirect()->route('users.index');
+
     }
 
     /**

@@ -1,23 +1,25 @@
 @extends('app');
 @section('title')
-    Create mountain
+    Create user
 @endsection
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-12 contenitore">
-            <h1>Create new mountain</h1>
-            {{-- esempio di tipico form di input --}}
-            <form class="form-group" action="{{ route('mountains.store') }}" method="post">
+            @include('partials.error')
+
+            <h1>Create new user</h1>
+            <form class="form-group" action="{{ route('users.store') }}" method="post">
                 @csrf
-                {{-- token di sicurezza per verificare che sia tu a inserire i dati e non hacker da altri pc--}}
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" name="name" class="form-control" id="" placeholder="Enter name">
-                    <label for="nation">Nation</label>
-                    <input type="text" name="nation" class="form-control" id="" placeholder="Enter nation">
-                    <label for="elevation">Elevation</label>
-                    <input type="number" name="elevation" class="form-control" id="" placeholder="Enter elevation">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" name="lastname" class="form-control" id="" placeholder="Enter lastname">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" class="form-control" id="" placeholder="Enter age">
+                    <label for="cf">C.F.</label>
+                    <input type="text" name="cf" class="form-control" id="" placeholder="Enter cf">
                 </div>
                 <div class="form-group">
                     <input class="btn btn-primary" type="submit" value="Save new element">
