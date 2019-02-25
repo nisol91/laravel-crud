@@ -1,6 +1,7 @@
 CRUD:
 
-bisogna creare il model. Il nome del model e' il singolare del nome della tabella a cui e' riferito. c e' un model per ogni tabella.
+bisogna creare il model. Esso fa da ponte tra DB e la nostra applicazione.
+Il nome del model e' il singolare del nome della tabella a cui e' riferito. c e' un model per ogni tabella.
 
 Il model e' meglio importarlo nei controller con :
 `use App\nomeModel`
@@ -17,7 +18,7 @@ E' un controller con gia preimpostati tutti i metodi per la crud
 
 
 
-NB: **Bisogna sempre ricordare la differenza fra view e rotta:**
+NB-> **Bisogna sempre ricordare la differenza fra view e rotta:**
 
 La view e' il nome del file blade.php.
 La rotta e' il percorso. I percorsi sono elencati nella colonna Name della php artisan route:list.
@@ -36,3 +37,6 @@ Lo si sfrutta quindi per togliere o meno la classe active.
 3 - dependence injection in alternativa al find $id:
 
 `public function show(Mountain $mountain) {return view('show', compact('mountain'))}`
+
+4 - in laravel il metodo dei form e' sempre *post*!!
+ma va aggiunto il metodo che utilizziamo nel blade: in caso di edit aggiungere PUT con `@method('PUT')`

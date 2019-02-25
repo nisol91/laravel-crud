@@ -1,6 +1,6 @@
 @extends('app');
 @section('title')
-    {{-- {{ $title }} --}}
+    {{ $mountain->name }}
 @endsection
 @section('content')
 <div class="container">
@@ -16,6 +16,7 @@
                 <li>Name: {{ $mountain->name }}</li>
                 <li>Nation: {{ $mountain->nation }}</li>
                 <li>Elevation: {{ $mountain->elevation }} m</li>
+                <img src="{{ $mountain->link_img }}" alt="">
             </ul>
         </div>
     </div>

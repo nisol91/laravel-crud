@@ -8,6 +8,7 @@ class Mountain extends Model
 {
     public $timestamps = false;
 
+
     protected $fillable = ['name', 'nation', 'elevation'];
     //mi dice che colonne del DB deve cercare di riempire il fill()
 

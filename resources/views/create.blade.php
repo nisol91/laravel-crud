@@ -1,6 +1,6 @@
 @extends('app');
 @section('title')
-    {{ $title }}
+    Create
 @endsection
 @section('content')
 <div class="container">
@@ -19,7 +19,9 @@
                     <label for="elevation">Elevation</label>
                     <input type="number" name="elevation" class="form-control" id="" placeholder="Enter elevation">
                 </div>
-                <input class="btn btn-primary" type="submit" value="Save new element">
+                <div class="form-group">
+                    <input class="btn btn-primary" type="submit" value="Save new element">
+                </div>
             </form>
         </div>
     </div>

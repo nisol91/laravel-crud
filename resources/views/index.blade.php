@@ -1,6 +1,6 @@
 @extends('app');
 @section('title')
-    {{ $title }}
+    Index
 @endsection
 @section('content')
 <div class="container">
@@ -21,8 +21,7 @@
                     <th scope="col">Elevation</th>
                     <th scope="col">Actions</th>
                     <th scope="col"></th>
-
-
+                    <th scope="col"></th>
                   </tr>
                 </thead>
                 @foreach ($mountains as $montagna)
@@ -33,8 +32,14 @@
                             <td>{{ $montagna->nation }}</td>
                             <td>{{ $montagna->elevation }} m</td>
                             <td><a class="btn btn-primary" href="{{ route('mountains.show', $montagna->ID) }}" role="button">View</a></td>
-                            <td><a class="btn btn-danger" href="#" role="button">Delete</a></td>
-
+                            <td><a class="btn btn-success" href="{{ route('mountains.edit', $montagna->ID) }}" role="button">Edit</a></td>
+                            <td>
+                                <form action="{{ route('mountains.destroy', $montagna->ID) }}" method="post">
+                                    @method('DELETE')
+                                    @csrf
+                                    <input class="btn btn-danger" type="submit" value="Delete">
+                                </form>
+                            </td>
                         </tr>
                     </tbody>
                 @endforeach

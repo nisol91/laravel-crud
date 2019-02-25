@@ -113,7 +113,11 @@ class MountainsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $mountain = Mountain::all();
+        $mountain = Mountain::find($id);
+
+        return view('edit', compact('mountain'));
+        //questa pagina e praticamente identica a quella show.
     }
 
     /**
@@ -125,7 +129,16 @@ class MountainsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $mountain = Mountain::find($id);
+
+        //solito discorso user injection: questo qui sopra potevo ometterlo se
+        // invece che $id mettevo Mountain $mountain nell argomento della funzione update.
+
+        $data = $request->all();
+
+        $mountain->update($data);
+
+        return redirect()->back();
     }
 
     /**
@@ -136,6 +149,8 @@ class MountainsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $mountain = Mountain::find($id);
+        $mountain->delete();
+        return redirect()->back();
     }
 }
