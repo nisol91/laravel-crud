@@ -6,6 +6,8 @@
 <div class="container">
     <div class="row">
         <div class="col-12 contenitore">
+            @include('partials.error')
+
             <h1>Edit user: {{ $user->id }}</h1>
             {{-- esempio di tipico form di input --}}
             <form class="form-group" action="{{ route('users.update', $user->id) }}" method="post">

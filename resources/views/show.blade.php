@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12 contenitore">
-            <h1>This is mount {{ $mountain['name'] }}   page</h1>
+            <h1>This is mount {{ $mountain['name'] }}</h1>
         <a href="{{ route('mountains.index') }}"><button type="button" name="" id="" class="btn btn-primary" btn-lg btn-block">Back to mountains list</button></a>
         </div>
     </div>

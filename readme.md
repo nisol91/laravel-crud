@@ -23,9 +23,13 @@ Utilizzo le migration per creare tabelle dal db:
 `php artisan make:model User -m -r`
 cosi credo migration, model e controller resource.
 
-I seeder mi permettono di popolare il db, manualmente o automaticamente con un faker generator:
+I seeder mi permettono di popolare il db, manualmente o automaticamente con un faker generator.
+Per creare il seeder:
 
 `php artisan make:seeder UsersTableSeeder`
+
+ogni volta che voglio attivarlo, sempre da terminale:
+`php artisan db:seed`
 
 -----
 

@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12 contenitore">
-            <h1>This is mount {{ $user['name'] }}   page</h1>
+            <h1>This is user {{ $user->id }}</h1>
         <a href="{{ route('users.index') }}"><button type="button" name="" id="" class="btn btn-primary" btn-lg btn-block">Back to users list</button></a>
         </div>
     </div>
