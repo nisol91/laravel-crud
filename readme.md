@@ -48,7 +48,7 @@ Il metodo validate() applicato alla potente classe Request, mi permette di effet
 -------------------------------------------------
 
 
-**Note**: 
+ #   **Note**:
 
 NB-> **Bisogna sempre ricordare la differenza fra view e rotta:**
 
@@ -71,5 +71,5 @@ Lo si sfrutta quindi per togliere o meno la classe active.
 4 - in laravel il metodo dei form e' sempre *post*!!
 ma va aggiunto il metodo che utilizziamo nel blade: in caso di edit aggiungere PUT con `@method('PUT')`
 
-5 - **NB** l' id nel database va sempre in minuscolo!!!!!
+5 - **NB** l' id nel database va sempre in minuscolo!!!!! come tutti gli altri campi!!
 
