@@ -52,7 +52,9 @@ Il metodo validate() applicato alla potente classe Request, mi permette di effet
     </div>
 @endif
  ```
-Se il mio input non passa i test, il programma si ferma li, no va nemmeno a creare il new User. Quindi non vengono nemmeno mostrati gli errori del database, il che va a vantaggio di una migliore esperienza utente.
+ > Se il mio input non passa i test, il programma si ferma li, non va nemmeno a creare il new User. Quindi non vengono nemmeno mostrati gli errori del database, il che va a vantaggio di una migliore esperienza utente.
+
+
 -------------------------------------------------
 
 
