@@ -16,6 +16,13 @@
 Route::get('/', 'HomeController@index')->name('home');
 
 
+// Route::redirect('/', '/home', 301);
+//se voglio reindirizzare / a /home..non e' il mio caso
+
 
 //con resourse chiamo una risorsa, cioe un controller con tanti metodi
 Route::resource('/mountains', 'MountainsController');
+
+
+Route::resource('/users', 'UserController');
+

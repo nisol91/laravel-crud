@@ -11,8 +11,8 @@
             <li class="nav-item {{ Request::route()->getName() == 'mountains.create' ? 'active' : null }}">
               <a class="nav-link" href="{{ route('mountains.create') }}">Create</a>
             </li>
-            <li class="nav-item {{ Request::route()->getName() == 'mountains.update' ? 'active' : null }}">
-              <a class="nav-link" href="#">Update</a>
+            <li class="nav-item {{ Request::route()->getName() == 'users.index' ? 'active' : null }}">
+                <a class="nav-link" href="{{ route('users.index') }}">Users</a>
             </li>
           </ul>
         </div>

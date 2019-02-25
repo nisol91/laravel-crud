@@ -16,7 +16,14 @@ cosi laravel capisce che la tabella ha quel nome, se no laravel ragiona pensando
 Per facilitare la CRUD, si puo creare una resource, sempre con php artisan.
 E' un controller con gia preimpostati tutti i metodi per la crud
 
+Utilizzo le migration per creare tabelle dal db:
 
+`php artisan make:model User -m -r`
+cosi credo migration, model e controller resource.
+
+I seeder mi permettono di popolare il db, manualmente o automaticamente con un faker generator:
+
+`php artisan make:seeder UsersTableSeeder`
 
 NB-> **Bisogna sempre ricordare la differenza fra view e rotta:**
 
@@ -42,3 +49,4 @@ Lo si sfrutta quindi per togliere o meno la classe active.
 ma va aggiunto il metodo che utilizziamo nel blade: in caso di edit aggiungere PUT con `@method('PUT')`
 
 5 - **NB** l' id nel database va sempre in minuscolo!!!!!
+
