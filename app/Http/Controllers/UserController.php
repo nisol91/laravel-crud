@@ -90,7 +90,7 @@ class UserController extends Controller
         $datiValidi = $request->validate([
             'name' => 'required|min:2',
             'lastname' => 'required|min:2',
-            'age' => 'numeric|min:10',
+            'age' => 'numeric|between:10,90',
 
         ]);
         $user->update($data);

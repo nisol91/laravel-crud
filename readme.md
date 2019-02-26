@@ -40,7 +40,7 @@ Se voglio modificarlo, mi copio [con il comando `php artisan vendor:publish --ta
 
 -----
 
-Il metodo validate() applicato alla potente classe Request, mi permette di effettuare dei controlli sui campi di input. ricordarsi di aggiungere nel blase la parte che mostra a schermo l errore:
+Il metodo  **validate()** applicato alla potente classe Request, mi permette di effettuare dei controlli sui campi di input. ricordarsi di aggiungere nel blase la parte che mostra a schermo l errore:
  ```language
  @if ($errors->any())
     <div class="alert alert-danger">
